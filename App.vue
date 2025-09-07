@@ -60,17 +60,29 @@
       </div>
     </nav>
   </div>
+  <div>
+    <BlogList :blog="blog"></BlogList>
+  </div>
 </template>
 
 <script>
+import BlogList from "./components/BlogList.vue";
+import blog from "./assets/blog.js";
 export default {
   name: "App",
+  data() {
+    return {
+      blog: blog,
+    };
+  },
+  components: {
+    BlogList: BlogList,
+  },
 };
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
