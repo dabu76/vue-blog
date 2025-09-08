@@ -60,13 +60,17 @@
       </div>
     </nav>
   </div>
-  <div>
+  <RouterView :blog="blog"></RouterView>
+  <router-link to="/list">リストページ</router-link>
+  <router-link to="/detail">DetailPage</router-link>
+
+  <!-- <div>
     <BlogList :blog="blog"></BlogList>
-  </div>
+  </div> -->
 </template>
 
 <script>
-import BlogList from "./components/BlogList.vue";
+// import BlogList from "./components/BlogList.vue";
 import blog from "./assets/blog.js";
 export default {
   name: "App",
@@ -75,9 +79,7 @@ export default {
       blog: blog,
     };
   },
-  components: {
-    BlogList: BlogList,
-  },
+  components: {},
 };
 </script>
 
