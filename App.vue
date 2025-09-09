@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="/#/list">Vuelog</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -60,10 +60,11 @@
       </div>
     </nav>
   </div>
-  <RouterView :blog="blog"></RouterView>
   <router-link to="/list">リストページ</router-link>
   <router-link to="/detail">DetailPage</router-link>
-
+  <div class="mt-4">
+    <RouterView :blog="blog"></RouterView>
+  </div>
   <!-- <div>
     <BlogList :blog="blog"></BlogList>
   </div> -->
